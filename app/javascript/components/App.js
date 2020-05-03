@@ -1,9 +1,9 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import HelloWorld from './HelloWorld'
-import configureStore from '../configureStore'
+import Home from './portfolio/Home'
+import configureStore from '../packs/configureStore'
 
 const store = configureStore();
 
@@ -15,6 +15,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" render={() => ("Home!")} />
             <Route path="/hello" render={() => <HelloWorld greeting="Friend" />} />
+            <Route path="/portfolio" render={() => <Home />} />
           </Switch>
         </BrowserRouter>
       </Provider>
