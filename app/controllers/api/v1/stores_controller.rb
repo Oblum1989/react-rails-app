@@ -7,13 +7,12 @@ class Api::V1::StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id])
-    render json: @stores, status: :ok
+    render json: @store, status: :ok
   end
 
   def create
     @store = Store.new(create_params)
-
-    if @store.save
+    if @store
       render json: @store, status: :created
     else
       render json: @store.errors, status: :unprocessable_entity
@@ -32,16 +31,17 @@ class Api::V1::StoresController < ApplicationController
   def destroy
     @store = Store.find(params[:id])
     @store.destroy
+    render json: {message: 'Successfully deleted'}
   end
 
   private
 
     def create_params
-      params.require(:store).permit(:name, :description, :link, :address, :contact_phones, :email)
+      params.require(:store).permit(:name, :description, :link, :address, :email, contact_phones: [])
     end
 
     def update_params
-      params.require(:store).permit(:name, :description, :link, :address, :contact_phones, :email, :active)
+      params.require(:store).permit(:name, :description, :link, :address, :email, :active, contact_phones: [])
     end
 
 end

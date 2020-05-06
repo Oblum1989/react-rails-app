@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import { createStructuredSelector} from 'reselect';
-import { List } from 'semantic-ui-react';
+import { List, Button } from 'semantic-ui-react';
 
 const GET_THINGS_REQUEST = 'GET_THINGS_REQUEST';
 const GET_THINGS_SUCCESS = 'GET_THINGS_SUCCESS';
@@ -44,6 +44,7 @@ class HelloWorld extends React.Component {
         Greeting: {this.props.greeting}
         <button className='getThingsBtn' onClick={() => this.props.getThings()}>getThings</button>
         <br />
+        <Button>Click Here</Button>
         <List divided relaxed>{thingsList}</List>
       </React.Fragment>
     );

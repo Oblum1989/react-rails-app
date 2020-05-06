@@ -1,4 +1,5 @@
 import React from 'react';
+import ResponsiveContainer from './ResponsiveContainer'
 import Header from './Header';
 import About from './About';
 import Skills from './Skills';
@@ -9,13 +10,14 @@ import Footer from './Footer';
 
 const Home = () => (
   <>
-    <Header />
-    <About />
-    <Skills />
-    <Education />
-    <Portfolio />
-    <Contact />
-    <Footer />
+    <ResponsiveContainer>
+      <About />
+      <Skills />
+      <Education />
+      <Portfolio />
+      <Contact />
+      <Footer />
+    </ResponsiveContainer>
   </>
 );
 

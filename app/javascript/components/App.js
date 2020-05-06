@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import HelloWorld from './HelloWorld'
 import Home from './portfolio/Home'
+import HomepageLayout from './HomepageLayout'
 import configureStore from '../packs/configureStore'
 
 const store = configureStore();
@@ -16,6 +17,7 @@ class App extends React.Component {
             <Route exact path="/" render={() => ("Home!")} />
             <Route path="/hello" render={() => <HelloWorld greeting="Friend" />} />
             <Route path="/portfolio" render={() => <Home />} />
+            <Route path="/homepage" render={() => <HomepageLayout />} />
           </Switch>
         </BrowserRouter>
       </Provider>
