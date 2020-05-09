@@ -1,4 +1,6 @@
 import React from 'react';
+import { Grid, Container, Divider, Segment } from 'semantic-ui-react'
+import ProyectCard from './ProyectCard'
 import Proy1 from '../../../assets/images/proy1.png';
 import Proy2 from '../../../assets/images/proy2.png';
 import Proy3 from '../../../assets/images/proy3.png';
@@ -7,72 +9,76 @@ import Proy5 from '../../../assets/images/proy5.png';
 import Proy6 from '../../../assets/images/proy6.png';
 
 const Portfolio = () => (
-  <div id="tf-portfolio">
-    <div className="container">
-      <div className="section-title">
-        <h3>My Latest Works</h3>
-      </div>
-
-      <div className="row">
-        <div className="col-md-4">
-          <div className="proyecto">
-            <img src={Proy1} className="img-responsive" alt='#' />
-            <div className="proy-description">
-              <p>Network diseño de Apps para empresa</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="proyecto">
-            <img src={Proy2} className="img-responsive" alt='#' />
-            <div className="proy-description">
-              <p>StudioDev creación de aplicaciones </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="proyecto">
-            <img src={Proy3} className="img-responsive" alt='#' />
-            <div className="proy-description">
-              <p>SuperBlog - Blog creado con Rails</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="row toppadding">
-        <div className="col-md-4">
-          <div className="proyecto">
-            <img src={Proy4} className="img-responsive" alt='#' />
-            <div className="proy-description">
-              <p>Aplicacion en Rails clon de Stack OverFlow</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="proyecto">
-            <img src={Proy5} className="img-responsive" alt='#' />
-            <div className="proy-description">
-              <p>PetShop Baco - Ecommerce para una veterinaria</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-md-4">
-          <div className="proyecto">
-            <img src={Proy6} className="img-responsive" alt='#' />
-            <div className="proy-description">
-              <p>Ecommerce ejercicio practico en Bootstrap</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <Segment style={{ padding: "8em 0em" }} vertical>
+    <div id="tf-portfolio">
+      <Container>
+        <Divider
+          as="h3"
+          className="header"
+          horizontal
+          style={{ margin: "3em 0em", textTransform: "uppercase" }}
+        >
+          <p>My Latest Works</p>
+        </Divider>
+        <Grid container columns={3}>
+          <Grid.Column>
+            <ProyectCard 
+              proy={Proy1}
+              content='Network diseño de Apps para empresa'
+              tecnologies='HTML | CSS | JavaScript'
+              year='2018'
+              link='Visit...'
+            />
+          </Grid.Column>
+          <Grid.Column>
+            <ProyectCard 
+              proy={Proy2}
+              content='StudioDev creación de aplicaciones'
+              tecnologies='HTML | CSS | JavaScript'
+              year='2018'
+              link='Visit...'
+            />
+          </Grid.Column>
+          <Grid.Column>
+            <ProyectCard 
+              proy={Proy3}
+              content='SuperBlog - Blog creado con Rails'
+              tecnologies='Ruby on Rails | Bootstrap | MySQL'
+              year='2019'
+              link='Visit...'
+            />
+          </Grid.Column>
+          <Grid.Column>
+            <ProyectCard 
+              proy={Proy4}
+              content='Aplicacion en Rails clon de Stack OverFlow'
+              tecnologies='Ruby on Rails | Bootstrap | MySQL | Markdown'
+              year='2019'
+              link='Visit...'
+            />
+          </Grid.Column>
+          <Grid.Column>
+            <ProyectCard 
+              proy={Proy5}
+              content='PetShop Baco - Ecommerce para una veterinaria'
+              tecnologies='Ruby on Rails | Bootstrap | MySQL | JavaScript'
+              year='2019'
+              link='Visit...'
+            />
+          </Grid.Column>
+          <Grid.Column>
+            <ProyectCard 
+              proy={Proy6}
+              content='Ecommerce ejercicio practico en Bootstrap'
+              tecnologies='HTML | CSS | JavaScript | Bootstrap'
+              year='2019'
+              link='Visit...'
+            />
+          </Grid.Column>
+        </Grid> 
+      </Container>
     </div>
-  </div>
+  </Segment>
 );
 
 export default Portfolio;
