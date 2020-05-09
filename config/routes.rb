@@ -9,6 +9,10 @@ Rails.application.routes.draw do
       resources :stores
     end
   end
+
+  post :users, to: 'users#create'
+  get :users, to: 'users#index'
+  post :login, to: 'auth#create'
   
   get '*page', to: 'static#index', constrains: ->(req) do 
     !req.xhr? && req.format.html?
