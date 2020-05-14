@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Card } from 'semantic-ui-react'
 
-const ProyectCard = (props) => (
+const ProjectCard = (props) => (
   <Card>
     <Image src={props.proy} />
     <Card.Content>
@@ -19,4 +19,4 @@ const ProyectCard = (props) => (
   </Card>
 );
 
-export default ProyectCard;
+export default ProjectCard;

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       resources :comments
       resources :posts
       resources :stores
+      resources :categories, only: [:index, :create, :delete]
+      resources :tags, only: [:index, :create, :delete]
     end
   end
 

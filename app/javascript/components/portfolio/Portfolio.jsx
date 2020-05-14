@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Container, Divider, Segment } from 'semantic-ui-react'
-import ProyectCard from './ProyectCard'
+import ProjectCard from './ProjectCard'
 import Proy1 from '../../../assets/images/proy1.png';
 import Proy2 from '../../../assets/images/proy2.png';
 import Proy3 from '../../../assets/images/proy3.png';
@@ -22,7 +22,7 @@ const Portfolio = () => (
         </Divider>
         <Grid container columns={3}>
           <Grid.Column>
-            <ProyectCard 
+            <ProjectCard 
               proy={Proy1}
               content='Network diseño de Apps para empresa'
               tecnologies='HTML | CSS | JavaScript'
@@ -31,7 +31,7 @@ const Portfolio = () => (
             />
           </Grid.Column>
           <Grid.Column>
-            <ProyectCard 
+            <ProjectCard 
               proy={Proy2}
               content='StudioDev creación de aplicaciones'
               tecnologies='HTML | CSS | JavaScript'
@@ -40,7 +40,7 @@ const Portfolio = () => (
             />
           </Grid.Column>
           <Grid.Column>
-            <ProyectCard 
+            <ProjectCard 
               proy={Proy3}
               content='SuperBlog - Blog creado con Rails'
               tecnologies='Ruby on Rails | Bootstrap | MySQL'
@@ -49,7 +49,7 @@ const Portfolio = () => (
             />
           </Grid.Column>
           <Grid.Column>
-            <ProyectCard 
+            <ProjectCard 
               proy={Proy4}
               content='Aplicacion en Rails clon de Stack OverFlow'
               tecnologies='Ruby on Rails | Bootstrap | MySQL | Markdown'
@@ -58,7 +58,7 @@ const Portfolio = () => (
             />
           </Grid.Column>
           <Grid.Column>
-            <ProyectCard 
+            <ProjectCard 
               proy={Proy5}
               content='PetShop Baco - Ecommerce para una veterinaria'
               tecnologies='Ruby on Rails | Bootstrap | MySQL | JavaScript'
@@ -67,7 +67,7 @@ const Portfolio = () => (
             />
           </Grid.Column>
           <Grid.Column>
-            <ProyectCard 
+            <ProjectCard 
               proy={Proy6}
               content='Ecommerce ejercicio practico en Bootstrap'
               tecnologies='HTML | CSS | JavaScript | Bootstrap'
