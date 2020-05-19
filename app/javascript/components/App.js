@@ -4,6 +4,8 @@ import { Provider } from 'react-redux'
 import HelloWorld from './HelloWorld'
 import Home from './portfolio/Home'
 import HomepageLayout from './HomepageLayout'
+import HomeStore from './stores/Home'
+import AllStores from './stores/Stores'
 import configureStore from '../packs/configureStore'
 
 const store = configureStore();
@@ -18,6 +20,8 @@ class App extends React.Component {
             <Route path="/hello" render={() => <HelloWorld greeting="Friend" />} />
             <Route path="/portfolio" render={() => <Home />} />
             <Route path="/homepage" render={() => <HomepageLayout />} />
+            <Route path="/homeStores" component={HomeStore} />
+            <Route path="/allStores" component={AllStores} />
           </Switch>
         </BrowserRouter>
       </Provider>
