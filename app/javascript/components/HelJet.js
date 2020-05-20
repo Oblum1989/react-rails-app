@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
+import { getThingsSuccess } from '../packs/redux/actions/actions'
 import { createStructuredSelector} from 'reselect';
 import { List, Button } from 'semantic-ui-react';
 
@@ -9,18 +10,11 @@ const GET_THINGS_SUCCESS = 'GET_THINGS_SUCCESS';
 function getThings() {
   console.log('getThings() Action!!')
   return dispatch => {
-    dispatch({ type: GET_THINGS_REQUEST });
+    // dispatch({ type: GET_THINGS_REQUEST });
     return fetch(`/api/v1/things`)
       .then(response => response.json())
       .then(json => dispatch(getThingsSuccess(json)))
       .catch(error => console.log(error));
-  }
-}
-
-export function getThingsSuccess(json) {
-  return {
-    type: GET_THINGS_SUCCESS,
-    json
   }
 }
 
@@ -46,6 +40,7 @@ class HelloWorld extends React.Component {
         <br />
         <Button>Click Here</Button>
         <List divided relaxed>{thingsList}</List>
+        <hr/>
       </React.Fragment>
     );
   }

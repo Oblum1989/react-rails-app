@@ -6,6 +6,7 @@ import Home from './portfolio/Home'
 import HomepageLayout from './HomepageLayout'
 import HomeStore from './stores/Home'
 import AllStores from './stores/Stores'
+import HelJet from './HelJet'
 import configureStore from '../packs/configureStore'
 
 const store = configureStore();
@@ -17,11 +18,11 @@ class App extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" render={() => ("Home!")} />
-            <Route path="/hello" render={() => <HelloWorld greeting="Friend" />} />
             <Route path="/portfolio" render={() => <Home />} />
             <Route path="/homepage" render={() => <HomepageLayout />} />
             <Route path="/homeStores" component={HomeStore} />
             <Route path="/allStores" component={AllStores} />
+            <Route path="/heljet" component={HelJet} />
           </Switch>
         </BrowserRouter>
       </Provider>
